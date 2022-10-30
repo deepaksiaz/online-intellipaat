@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function clickHandler(){
+            // document.getElementsByClassName("container")[0].innerHTML += " [ Box ] "
+            // document.getElementsByClassName("container")[0].textContent += " [ Box ] "
+            document.getElementsByClassName("container")[0].innerHTML += "<li> Box </li>"
+        }
+    </script>
+</head>
+<body>
+    <button onclick="clickHandler()">Add Box</button>
+    <hr>
+    <ul class="container"></ul>
+</body>
+</html>
+
+<!-- http://p.ip.fi/Zknz -->

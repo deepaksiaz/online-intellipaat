@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var message = "you clicked the button";
+        // let message = "you clicked the button";
+        const message = "you clicked the button";
+        function changeMessage(){
+            message = "did you click me";
+            alert("message changed");
+        }
+        function clickHandler(){
+            alert(message);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="changeMessage()">Change Message</button>
+    <button onclick="clickHandler()">Click Me 2</button>
+    <button onclick="clickHandler()">Click Me 3</button>
+    <button onclick="clickHandler()">Click Me 4</button>
+</body>
+</html>
+
+<!-- http://p.ip.fi/wZBp -->

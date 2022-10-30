@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myscript.js"></script>
+    <script>
+        function removeClickHandler(){
+            document.getElementsByTagName("button")[0].removeEventListener("click", clickHandler);
+        };
+        function clickHandler(){
+            document.getElementsByTagName("div")[0].innerHTML += "<p> button was clicked </p>";
+        };
+       
+        function init(){
+            document.getElementsByTagName("button")[0].addEventListener("click", clickHandler);
+            document.getElementsByTagName("button")[1].addEventListener("click", removeClickHandler);
+        }
+        // window.onload = init;
+        // window.addEventListener("load", init);
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <button>Add Message</button>
+    <button>Stop Adding Message</button>
+    <div></div>
+   
+</body>
+</html>
+
+<!-- http://p.ip.fi/zzX1 -->
+
+<!--
+create 3 functions call them fun1, fun2, fun3
+
+call fun1 on body onload="fun1";
+call fun2 on window addEventListener("load", fun2);
+call fun3 on document addEventListener("DOMContentLoaded", fun3);
+
+findout which of these will run first
+and findout which the sequence of the events
+-->

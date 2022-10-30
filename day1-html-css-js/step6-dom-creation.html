@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid darkslategray;
+            background-color: slategray;
+            width: 800px;
+            height: 300px;
+            overflow: auto;
+        }
+        .container div{
+            background-color: rgb(194, 242, 34);
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            float: left;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            document.getElementsByTagName("button")[0].onclick = function(){
+                document.getElementsByClassName("container")[0].innerHTML += "<div></div>"
+            }
+        };
+    </script>
+</head>
+<body>
+    <button>Add Box</button>
+    <hr>
+    <div class="container"></div>
+</body>
+</html>
+
+<!-- http://p.ip.fi/WiZt -->
