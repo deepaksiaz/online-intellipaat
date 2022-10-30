@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid darkslategray;
+            background-color: slategray;
+            width: 800px;
+            height: 300px;
+            overflow: auto;
+            margin: auto;
+        }
+        .container div{
+            background-color: rgb(194, 242, 34);
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            float: left;
+            font-size: 40px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+    <script>
+      // function declaration 
+      let count = 1;
+      function clickHandler(){
+        // document.getElementsByClassName("container")[0].innerHTML = "button was clicked"
+        // document.querySelector(".container").innerHTML += "<div></div>";
+        let box = document.createElement("div");
+            box.innerText = count;
+        document.querySelector(".container").appendChild(box);
+        count++;
+      };
+
+      function removeHandler(){
+        let box = document.querySelector(".container").firstChild;
+        document.querySelector(".container").removeChild(box);
+      };
+
+      // function expression
+      let init = function(){
+        document
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", clickHandler);
+        document
+        .getElementsByTagName("button")[1]
+        .addEventListener("click", removeHandler);
+      }
+      document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <button>Add Box</button>
+    <button>Remove Box</button>
+    <hr>
+    <div class="container"></div>
+</body>
+</html>
