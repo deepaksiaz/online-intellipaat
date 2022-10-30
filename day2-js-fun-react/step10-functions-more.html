@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let ironman = {
+            firstname : "Tony",
+            lastname : "Stark",
+            power : 7,
+            fullname : function(city){
+                return this.firstname+" "+this.lastname+" is from "+city;
+            }
+        };
+        let spiderman = {
+            firstname : "Peter",
+            lastname : "Parker",
+            power : 5
+        };
+        let hulk = {
+            firstname : "Bruce",
+            lastname : "Benner",
+            power : 8
+        };
+        let captainamerica = {
+            firstname : "Steve",
+            lastname : "Roger",
+            power : 8
+        };
+        console.log( ironman.fullname("New York") );
+        // console.log( ironman.fullname.call(spiderman, "New York") );
+        console.log( ironman.fullname.apply(spiderman, ["New York"]) );
+        // console.log( ironman.fullname.apply(hulk) );
+        // console.log( ironman.fullname.bind(captainamerica)() );
+        // let captfullname = ironman.fullname.bind(captainamerica);
+        // adf asdf asf
+        // console.log(captfullname());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- http://p.ip.fi/yHaw -->

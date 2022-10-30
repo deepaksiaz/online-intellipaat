@@ -37,9 +37,14 @@
         count++;
       };
 
-      function removeHandler(){
+      function removeFirstHandler(){
         let box = document.querySelector(".container").firstChild;
-        document.querySelector(".container").removeChild(box);
+        if(box) document.querySelector(".container").removeChild(box);
+      };
+
+      function removeLastHandler(){
+        let box = document.querySelector(".container").lastChild;
+        if(box) document.querySelector(".container").removeChild(box);
       };
 
       // function expression
@@ -49,15 +54,23 @@
         .addEventListener("click", clickHandler);
         document
         .getElementsByTagName("button")[1]
-        .addEventListener("click", removeHandler);
+        .addEventListener("click", removeFirstHandler);
+
+        document
+        .getElementsByTagName("button")[2]
+        .addEventListener("click", removeLastHandler);
       }
       document.addEventListener("DOMContentLoaded", init);
     </script>
 </head>
 <body>
     <button>Add Box</button>
-    <button>Remove Box</button>
+    <button>Remove First Box</button>
+    <button>Remove Last Box</button>
     <hr>
     <div class="container"></div>
 </body>
 </html>
+
+<!-- http://p.ip.fi/QYlz -->
+

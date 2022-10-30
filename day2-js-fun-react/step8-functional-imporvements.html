@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Improvements</title>
+    <script>
+        // how to destructure
+        let hero = {
+            title : "Batman",
+            power : 7,
+            firstname : "Bruce",
+            lastname : "Wayne"
+        };
+        // let temphero = hero;
+
+        /* 
+        let herotitle = hero.title;
+        let heropower = hero.power;
+        let herofirstname = hero.firstname;
+        let herolastname = hero.lastname; 
+        */
+
+        /* 
+        let herotitle = hero.title,
+            heropower = hero.power,
+            herofirstname = hero.firstname,
+            herolastname = hero.lastname; 
+        */
+
+        // destructuring
+       /*  let { title : title, 
+              power : power, 
+              firstname : firstname, 
+              lastname : lastname } = hero; */
+
+        // let { title, power, firstname, lastname } = hero;
+
+        // let temphero = JSON.parse( JSON.stringify(hero) );
+        let temphero = {...hero};
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementById("log").innerText += temphero.title;
+            temphero.title = "Joker";
+            document.getElementById("log").innerHTML += "<br/>";
+            document.getElementById("log").innerText += temphero.title;
+            document.getElementById("log").innerHTML += "<br/>";
+            document.getElementById("log").innerText += hero.title;
+        })
+    </script>
+</head>
+<body>
+    <h1 id="log"></h1>
+</body>
+</html>
+
+<!-- http://p.ip.fi/24Ra -->

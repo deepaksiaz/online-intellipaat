@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // default parameter
+        /* 
+        function adder(num1 = 0, num2 = 0){
+            return num1 + num2;
+        }; 
+        */
+       /* 
+       function adder(){
+           // return num1 + num2;
+           // return arguments.length
+           let total = 0;
+           for(let i = 0; i < arguments.length; i++){
+            total += arguments[i]
+           };
+           return total;
+       };  
+       */
+      // rest parameters
+       function adder(...nums){
+           let total = 0;
+           for(let i = 0; i < nums.length; i++){
+            total += nums[i]
+           };
+           return total;
+       }; 
+        function init(){
+            // document.getElementById("log").innerText = adder(5,6);
+            // document.getElementById("log").innerText = adder(5,6);
+            // document.getElementById("log").innerText = adder(5,6);
+            document.getElementById("log").innerHTML += adder(5)+"<br/>";
+            document.getElementById("log").innerHTML += adder(5,6)+"<br/>";
+            document.getElementById("log").innerHTML += adder(5,6,7)+"<br/>";
+            document.getElementById("log").innerHTML += adder(5,6,7,8)+"<br/>";
+            document.getElementById("log").innerHTML += adder(5,6,7,8,9)+"<br/>";
+            // spread syntax
+            let args = [5,6,7,8,9];
+            document.getElementById("log").innerHTML += adder(...args)+"<br/>";
+        }
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <h1 id="log"></h1>
+</body>
+</html>
+
+<!-- http://p.ip.fi/dqaw  -->

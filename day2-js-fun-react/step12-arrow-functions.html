@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var power = 100;
+        var hero = {
+            title : "Ironman",
+            sayPower : function(){
+                return 10;
+            },
+            powerWithBooster : function(){
+                var addBooster = function(){
+                    return this.sayPower() * 0.5;
+                };
+                return this.sayPower()+addBooster();
+            }
+        };
+        console.log( hero.powerWithBooster() );/// ??
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
