@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <script>
+
+       /*  
+       */
+        let promise1 = new Promise(function(resolve, reject){
+            setTimeout(function(){
+               if(true){
+                    resolve("promise1 was resolved");
+                }else{
+                    reject("promise1 was rejected");
+               }
+            },3000);
+        });
+
+        let promise2 = new Promise(function(resolve, reject){
+            setTimeout(function(){
+               if(true){
+                    resolve("promise2 was resolved");
+                }else{
+                    reject("promise2 was rejected");
+               }
+            },1000);
+        });
+
+        let promise3 = new Promise(function(resolve, reject){
+            setTimeout(function(){
+               if(false){
+                    resolve("promise3 was resolved");
+                }else{
+                    reject("promise3 was rejected");
+               }
+            },500);
+        });
+
+       /*  
+       promise1
+        .then(function(res){
+            console.warn("Resolve Response : ",res);
+        })
+        .catch(function(err){
+            console.error("Reject Response : ",err);
+        })
+        .finally(function(){
+            console.log("promise is completed");
+        });
+        */
+
+       /*  
+       promise1
+        .then(
+        function(res){
+            console.warn("Resolve Response : ",res);
+        },
+        function(err){
+            console.error("Reject Response : ",err);
+        }
+        ); 
+        */
+       
+        /* Promise
+        .all([promise2, promise3, promise1])
+        .then(function(res){
+            console.log(res);
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+        .finally(function(){
+            console.log("all promises are completed");
+        }) */
+
+        /* 
+        Promise
+        .any([promise2, promise3, promise1])
+        .then(function(res){
+            console.log(res);
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+        .finally(function(){
+            console.log("all promises are completed");
+        }) 
+        */
+
+        Promise
+        .race([promise2, promise3, promise1])
+        .then(function(res){
+            console.log(res);
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+        .finally(function(){
+            console.log("all promises are completed");
+        }) 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
