@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array methods</title>
+    <script>
+        let favNum = [55,77,78,65,34,23,4,27,80,15,27,99,12];
+        
+        /*
+        let doubleFavNum = [];
+        for(var i = 0; i < favNum.length; i++){
+            doubleFavNum.push(favNum[i] * 2);
+        };
+        console.log(favNum);
+        console.log(doubleFavNum);
+        */
+        
+        /*
+        forEach 
+        map
+        filter
+        every
+        some 
+        reduce
+        indexOf
+        */
+       /*
+       favNum.forEach(function(val, idx, arr){
+           // console.log(arguments[0], arguments[1], arguments[2]);
+           // console.log("value is ",val," index is ", idx,"Array ", arr);
+           doubleFavNum.push(val * 2);
+        });
+        console.log(favNum);
+        console.log(doubleFavNum);
+      */
+     /*  
+     let doubleFavNum = favNum.map(function(val, idx, arr){
+           return val * 2;
+      });
+      console.log(favNum);
+      console.log(doubleFavNum); 
+      */
+     let doubleFavNum = favNum.map( val => val * 2 );
+     console.log(favNum);
+     console.log(doubleFavNum); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
