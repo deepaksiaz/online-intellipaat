@@ -18,13 +18,15 @@
         */
         
         /*
-        forEach 
-        map
-        filter
-        every
-        some 
-        reduce
-        indexOf
+        >> forEach 
+        >> map
+        >> filter
+        >> every
+        >> some 
+        >> reduce
+        >> reduceRight
+        >> indexOf
+        >> lastIndexOf
         */
        /*
        favNum.forEach(function(val, idx, arr){
@@ -34,20 +36,52 @@
         });
         console.log(favNum);
         console.log(doubleFavNum);
-      */
-     /*  
+    */
+    /*  
      let doubleFavNum = favNum.map(function(val, idx, arr){
            return val * 2;
       });
       console.log(favNum);
       console.log(doubleFavNum); 
-      */
-     let doubleFavNum = favNum.map( val => val * 2 );
+    */
+    /* 
+     let doubleFavNum = favNum.map( (val) => val * 2 );
      console.log(favNum);
      console.log(doubleFavNum); 
+     document.addEventListener("DOMContentLoaded", ()=>{
+        document.getElementById("log").innerText = doubleFavNum;
+     }) 
+    */
+    /*
+    let lessThan50 = favNum.filter(val => val < 50);
+    let greaterThan50 = favNum.filter(val => val > 50);
+    console.log("Original array", favNum );
+    console.log("Values Less Than 50", lessThan50 );
+    console.log("Values Greater Than 50", greaterThan50 );
+    */
+    /*    
+    let allValsLessThan80 = favNum.every( (val, idx) => {
+    console.log("every was called times", idx+1);
+    return val < 80;
+   } );
+   console.log(allValsLessThan80);// false 
+   */
+   /* 
+   let someValsLessThan80 = favNum.some( (val, idx) => {
+    console.log("some was called times", idx+1);
+    return val < 80;
+   } );
+   console.log(someValsLessThan80);// false 
+   */
+   var total = favNum.reduce(function(initVal, val, idx, arr){
+    return initVal + val;
+   }, 0);
+   console.log(total);
+   console.log(favNum.indexOf(27));
+   console.log(favNum.indexOf(27,8));
     </script>
 </head>
 <body>
-    
+    <div id="log"></div>
 </body>
 </html>
