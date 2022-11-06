@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 150px;
+            background-color: brown;
+            color: bisque;
+            text-align: center;
+            line-height: 150px;
+            font-family: sans-serif;
+        }
+    </style>
+    <script>
+       /*  
+       let elm = document.createElement("div");
+       elm.innerHTML = "welcome to your life";
+       elm.setAttribute("class","box");
+       document.addEventListener("DOMContentLoaded", function(){
+           document.getElementById("root").appendChild(elm);
+       }); 
+        */
+
+      class Hero{
+          // public
+          title = "default title";
+          firstname = "default firstname";
+          lastname = "default lastname";
+          // private
+          #mission = "private mission";
+          // static
+          static version = 101;
+          // constructor
+          constructor(htitle, hfname, hlname){
+            this.title = htitle;
+            this.firstname = hfname;
+            this.lastname = hlname;
+          }
+          // methods
+          fullname(){
+            return this.firstname+" "+this.lastname;
+          }
+         /*  #fullnameInUpperCase(){
+            return this.firstname+" "+this.lastname;
+          } */
+          // get
+          get mission(){
+            return this.#mission;
+          }
+          // set
+          set mission(nmission){
+            this.#mission = nmission;
+          }
+      };
+
+      let hero = new Hero("Batman","Bruce", "Wayne");
+      // getter
+      console.log( hero.mission );
+      // setter
+      hero.mission = "save the world";
+      // getter
+      console.log( hero.mission );
+      console.log( hero.fullname() );
+      console.log( hero.version );
+      // console.log( hero.#fullnameInUpperCase() );
+      console.log( Hero.version );
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
+
+<!-- http://p.ip.fi/3SOc -->
