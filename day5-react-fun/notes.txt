@@ -1,0 +1,5 @@
+install latest version of nodejs
+npx create-react-app steps
+
+cd steps 
+npm start

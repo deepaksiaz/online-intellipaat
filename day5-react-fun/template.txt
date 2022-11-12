@@ -1,0 +1,13 @@
+import { Component } from "react";
+
+class FirstComp extends Component{
+    render(){
+        return <div>
+            <h1>Welcome to your life</h1>
+        </div>
+    }
+}
+
+export default FirstComp;
+
+-----------------------
