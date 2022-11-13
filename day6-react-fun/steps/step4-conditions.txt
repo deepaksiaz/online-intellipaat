@@ -1,0 +1,89 @@
+import { Component } from "react";
+/* 
+class App extends Component{
+    state = {
+        show : false
+    }
+    render(){
+        if(this.state.show){
+            return <div>
+                    <h1>Hereos Application</h1>
+                    <p>Present show value is : { this.state.show+"" }</p>
+                    <label htmlFor="">Show Terms and Conditions</label>
+                    <input onChange={()=> this.setState( { show : !this.state.show } )} checked={this.state.show} type="checkbox"  />
+                   <fieldset>
+                    <legend>Terms & Conditions</legend>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum debitis officia dolore quod hic possimus, blanditiis quasi. Nobis, maxime labore, rem officia expedita ex exercitationem optio unde, velit non commodi?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic repellendus quis perspiciatis cupiditate, dicta quasi culpa possimus cum debitis placeat maiores, ea dolores, porro consequuntur aut. Quae, sequi dolores.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta debitis architecto ex itaque sint, molestiae officiis numquam odit voluptates magni ipsum a illo quidem incidunt quis minima explicabo quisquam nihil?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur amet tempore porro suscipit. Perspiciatis quaerat molestiae iusto sapiente dicta reprehenderit consectetur temporibus architecto, esse perferendis facilis sit velit veniam atque.
+                    </p>
+                   </fieldset>
+               </div>
+        }else{
+            return <div>
+                    <h1>Hereos Application</h1>
+                    <p>Present show value is : { this.state.show+"" }</p>
+                    <label htmlFor="">Show Terms and Conditions</label>
+                    <input onChange={()=> this.setState( { show : !this.state.show } )} checked={this.state.show} type="checkbox"  />
+               </div>
+        }
+    }
+}
+ */
+
+
+
+/* class App extends Component{
+    state = {
+        show : false
+    }
+    render(){
+        return <div>
+                    <h1>Hereos Application</h1>
+                    <p>Present show value is : { this.state.show+"" }</p>
+                    <label htmlFor="">Show Terms and Conditions</label>
+                    <input onChange={()=> this.setState( { show : !this.state.show } )} checked={this.state.show} type="checkbox"  />
+                   {
+                    this.state.show ? <fieldset>
+                    <legend>Terms & Conditions</legend>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum debitis officia dolore quod hic possimus, blanditiis quasi. Nobis, maxime labore, rem officia expedita ex exercitationem optio unde, velit non commodi?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic repellendus quis perspiciatis cupiditate, dicta quasi culpa possimus cum debitis placeat maiores, ea dolores, porro consequuntur aut. Quae, sequi dolores.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta debitis architecto ex itaque sint, molestiae officiis numquam odit voluptates magni ipsum a illo quidem incidunt quis minima explicabo quisquam nihil?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur amet tempore porro suscipit. Perspiciatis quaerat molestiae iusto sapiente dicta reprehenderit consectetur temporibus architecto, esse perferendis facilis sit velit veniam atque.
+                    </p>
+                   </fieldset> : "terms are hidden"
+                   }
+               </div>
+    }
+}
+ */
+
+class App extends Component{
+    state = {
+        show : false
+    }
+    render(){
+        return <div>
+                    <h1>Hereos Application</h1>
+                    <p>Present show value is : { this.state.show+"" }</p>
+                    <label htmlFor="">Show Terms and Conditions</label>
+                    <input onChange={()=> this.setState( { show : !this.state.show } )} checked={this.state.show} type="checkbox"  />
+                   {
+                    this.state.show && <fieldset>
+                    <legend>Terms & Conditions</legend>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum debitis officia dolore quod hic possimus, blanditiis quasi. Nobis, maxime labore, rem officia expedita ex exercitationem optio unde, velit non commodi?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic repellendus quis perspiciatis cupiditate, dicta quasi culpa possimus cum debitis placeat maiores, ea dolores, porro consequuntur aut. Quae, sequi dolores.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta debitis architecto ex itaque sint, molestiae officiis numquam odit voluptates magni ipsum a illo quidem incidunt quis minima explicabo quisquam nihil?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur amet tempore porro suscipit. Perspiciatis quaerat molestiae iusto sapiente dicta reprehenderit consectetur temporibus architecto, esse perferendis facilis sit velit veniam atque.
+                    </p>
+                   </fieldset> 
+                   }
+               </div>
+    }
+}
+
+export default App;
