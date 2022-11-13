@@ -1,0 +1,32 @@
+import { Component } from "react";
+
+class HeroesComp extends Component{
+    render(){
+        return <div>
+                    <h2>Power is : { this.props.power }</h2>
+                </div>
+    }
+}
+
+export default HeroesComp;
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+import { Component } from "react";
+import HeroesComp from "./heroes";
+
+class App extends Component{
+    state = {
+        power : 0
+    }
+    render(){
+        return <div>
+                    <h1>Hereos Application | power { this.state.power }</h1>
+                    <HeroesComp power={ this.state.power } />
+               </div>
+    }
+}
+
+export default App;
