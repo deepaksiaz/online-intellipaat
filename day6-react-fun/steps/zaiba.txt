@@ -1,0 +1,23 @@
+import { Component } from "react";
+import HeroesComp from "./heroes";
+
+class App extends Component{
+    state = {
+        power : [0]
+    }
+    increaseHandler = (num) => {
+        this.setState({
+            power : [...this.state.power,num]
+        })
+    }
+    render(){
+        return <div>
+                    <h1>Hereos Application | power { this.state.power[this.state.power.length-1] }</h1>
+                    { this.state.power.map((val,idx) => <p key={idx}>{ val }</p>) }
+                    <hr />
+                    <HeroesComp increaseHandler={ this.increaseHandler } power={ this.state.power } />
+               </div>
+    }
+}
+
+export default App;
